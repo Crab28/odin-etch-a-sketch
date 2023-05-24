@@ -6,6 +6,8 @@ let gridSize = 16;
 function createWindowTiles() {
     removeAllChildNodes(SKETCH_WINDOW);
 
+    checkGridSize();
+
     for (let i = 0; i < gridSize; i++) {
         let row = document.createElement('div');
         row.classList.add('row');
@@ -20,6 +22,8 @@ function createWindowTiles() {
 
         SKETCH_WINDOW.appendChild(row);
     }
+
+    createTileListeners();
 
 }
 
@@ -40,5 +44,25 @@ function createTileListeners() {
     }
 }
 
+function createSliderListener() {
+    const SLIDER = document.getElementById('myRange');
+    const SLIDER_NUMBER = document.getElementById('slider-number');
+
+    SLIDER.addEventListener('input', () => {
+        gridSize = SLIDER.value;
+        
+        SLIDER_NUMBER.textContent = gridSize + 'x' + gridSize;
+        createWindowTiles();
+    });
+}
+
+function checkGridSize() {
+    if (gridSize > 32) {
+        gridSize = 32;
+    } else if (gridSize < 8) {
+        gridSize = 8;
+    }
+}
+
 createWindowTiles();
-createTileListeners();
+createSliderListener();
