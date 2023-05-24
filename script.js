@@ -13,7 +13,8 @@ function createWindowTiles() {
         for (let i = 0; i < gridSize; i++) {
             let tile = document.createElement('div');
             tile.classList.add('tile');
-            tile.classList.add('tile-' + gridSize);
+            tile.style.width = 480 / 16 + 'px';
+            tile.style.height = 480 / 16 + 'px';
             row.appendChild(tile);
         }
 

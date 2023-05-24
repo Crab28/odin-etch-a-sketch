@@ -24,16 +24,6 @@
     border: 1px solid black;
 }
 
-.tile-16 {
-    width: 30px;
-    height: 30px;
-}
-
-.tile-32 {
-    width: 15px;
-    height: 15px;
-}
-
 .tile-red {
     background-color: red;
 }
