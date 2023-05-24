@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -16,11 +17,11 @@
 #sketch-window {
     display: flex;
     flex-wrap: wrap;
-    outline: 2px solid black;
+    outline: 1px solid black;
 }
 
 .tile {
-    outline: 1px solid black;
+    border: 1px solid black;
 }
 
 .tile-16 {
@@ -31,4 +32,8 @@
 .tile-32 {
     width: 15px;
     height: 15px;
+}
+
+.tile-red {
+    background-color: red;
 }

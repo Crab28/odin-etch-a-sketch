@@ -28,4 +28,16 @@ function removeAllChildNodes(parent) {
     }
 }
 
+function createTileListeners() {
+    const tiles = document.getElementsByClassName('tile');
+
+    for (let index = 0; index < tiles.length; index++) {
+        tiles[index].addEventListener('mouseover', () => {
+            tiles[index].classList.add('tile-red')
+        });
+        
+    }
+}
+
 createWindowTiles();
+createTileListeners();
