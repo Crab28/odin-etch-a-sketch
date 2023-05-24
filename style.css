@@ -2,6 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #eee;
 }
 
 #sketch-title {
@@ -12,6 +17,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 480px;
+    margin: 0 auto;
 }
 
 #sketch-window {
@@ -22,8 +29,56 @@
 
 .tile {
     border: 1px solid black;
+    background-color: #fff;
 }
 
 .tile-red {
     background-color: red;
 }
+
+#sketch-settings {
+    background-color: rgba(194, 194, 194, 0.342);
+    border: 1px solid black;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+#slide-number {
+    text-align: center;
+}
+
+.slider {
+    appearance: none;
+    width: 150px;
+    height: 7px;
+    border-radius: 5px;  
+    background: #000000;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #ffffff;
+    cursor: pointer;
+    border: 1px solid black;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
