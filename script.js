@@ -2,6 +2,7 @@ const SKETCH_WINDOW = document.getElementById('sketch-window');
 const SKETCH_SETTINGS = document.getElementById('sketch-settings');
 
 let gridSize = 16;
+let currentColor = '#000000';
 
 function createWindowTiles() {
     removeAllChildNodes(SKETCH_WINDOW);
@@ -38,9 +39,8 @@ function createTileListeners() {
 
     for (let index = 0; index < tiles.length; index++) {
         tiles[index].addEventListener('mouseover', () => {
-            tiles[index].classList.add('tile-red')
+            tiles[index].style.backgroundColor = currentColor;
         });
-        
     }
 }
 
@@ -56,6 +56,14 @@ function createSliderListener() {
     });
 }
 
+function createColorListener() {
+    const COLOR_PICKER = document.getElementById('color-picker');
+
+    COLOR_PICKER.addEventListener('input', () => {
+        currentColor = COLOR_PICKER.value;
+    })
+}
+
 function checkGridSize() {
     if (gridSize > 32) {
         gridSize = 32;
@@ -66,3 +74,4 @@ function checkGridSize() {
 
 createWindowTiles();
 createSliderListener();
+createColorListener();
