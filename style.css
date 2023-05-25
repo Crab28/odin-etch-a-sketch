@@ -83,3 +83,17 @@ body {
     cursor: pointer;
 }
 
+#reset-btn {
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+#reset-btn:active {
+    transform: scale(0.97);
+}
+
+#reset-btn:focus {
+    outline: none;
+}

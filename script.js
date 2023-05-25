@@ -72,6 +72,15 @@ function checkGridSize() {
     }
 }
 
+function createButtonListeners() {
+    const RESET_BUTTON = document.getElementById('reset-btn');
+
+    RESET_BUTTON.addEventListener('click', () => {
+        createWindowTiles();
+    })
+}
+
 createWindowTiles();
 createSliderListener();
 createColorListener();
+createButtonListeners();
