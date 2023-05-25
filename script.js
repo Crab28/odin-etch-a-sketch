@@ -74,9 +74,14 @@ function checkGridSize() {
 
 function createButtonListeners() {
     const RESET_BUTTON = document.getElementById('reset-btn');
+    const ERASER_BUTTON = document.getElementById('eraser');
 
-    RESET_BUTTON.addEventListener('click', () => {
+    RESET_BUTTON.addEventListener('mouseup', () => {
         createWindowTiles();
+    })
+
+    ERASER_BUTTON.addEventListener('mouseup', () => {
+        currentColor = '#ffffff';
     })
 }
 
