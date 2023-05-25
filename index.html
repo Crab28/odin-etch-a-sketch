@@ -14,14 +14,17 @@
         </div>
         <div id="sketch-window"></div>
         <div id="sketch-settings">
-            <button id="reset-btn">
+            <button id="reset-btn" class="btn">
                 Reset
             </button>
             <div class="slidecontainer">
                 <small id="slider-number">16x16</small>
                 <input type="range" min="8" max="32" value="16" class="slider" id="myRange">
             </div>
-            <input id="color-picker" type="color" name="color">
+            <div id="color-picker-container">
+                <input id="color-picker" type="color" name="color">
+                <button id="eraser" class="btn">Eraser</button>
+            </div>
         </div>
     </div>
     <script src="./script.js"></script>

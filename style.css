@@ -67,8 +67,8 @@ body {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%; 
     background: #ffffff;
     cursor: pointer;
@@ -83,17 +83,45 @@ body {
     cursor: pointer;
 }
 
-#reset-btn {
+.btn {
     padding: 5px 10px;
     border-radius: 6px;
     border: 1px solid #555;
     cursor: pointer;
 }
 
-#reset-btn:active {
+.btn:active {
     transform: scale(0.97);
 }
 
-#reset-btn:focus {
+.btn:focus {
     outline: none;
+}
+
+#color-picker-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#eraser, #color-picker {
+    margin: 0 10px;
+}
+
+#color-picker {
+    border: 1px solid #555;
+    border-radius: 6px;
+    width: 60px;
+}
+
+.slidecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70%;
+}
+
+#slider-number {
+    font-size: 0.7rem;
 }
